@@ -10,16 +10,9 @@ import "element-ui/lib/theme-chalk/index.css";
 import locale from "element-ui/lib/locale/lang/ja";
 
 import Home from "./pages/home.vue";
+import config from "./config.js";
 
 Vue.config.productionTip = false;
-var config = {
-  apiKey: process.env.VUE_APP_FIREBASE_API_KEY,
-  authDomain: process.env.VUE_APP_FIREBASE_AUTH_DOMAIN,
-  databaseURL: process.env.VUE_APP_FIREBASE_DATABASE_URL,
-  projectId: process.env.VUE_APP_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.VUE_APP_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.VUE_APP_FIREBASE_MESSAGING_SENDER_ID
-};
 
 firebase.initializeApp(config);
 Vue.use(ElementUI, { locale });
