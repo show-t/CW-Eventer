@@ -13,12 +13,12 @@ import Home from "./pages/home.vue";
 
 Vue.config.productionTip = false;
 var config = {
-  apiKey: "AIzaSyD1Q8EXXuDImbIg_qJ0VYyWFps_chekNDw",
-  authDomain: "cwnote-afb4b.firebaseapp.com",
-  databaseURL: "https://cwnote-afb4b.firebaseio.com",
-  projectId: "cwnote-afb4b",
-  storageBucket: "cwnote-afb4b.appspot.com",
-  messagingSenderId: "360806917172"
+  apiKey: process.env.VUE_APP_FIREBASE_API_KEY,
+  authDomain: process.env.VUE_APP_FIREBASE_AUTH_DOMAIN,
+  databaseURL: process.env.VUE_APP_FIREBASE_DATABASE_URL,
+  projectId: process.env.VUE_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.VUE_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.VUE_APP_FIREBASE_MESSAGING_SENDER_ID
 };
 
 firebase.initializeApp(config);
